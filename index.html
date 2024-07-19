@@ -33,6 +33,9 @@
   </head>
 
   <body>
+    <button id="theme-toggle" class="toggle" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
     <main>
       <aside>
         <div class="sidebar">
@@ -221,19 +224,37 @@
             </div>
 
             <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 80%">
+              <div class="progress-bar" role="progressbar" style="width: 90%">
                 <div class="progress-text">
                   <span>CSS</span>
-                  <span>80%</span>
+                  <span>90%</span>
                 </div>
               </div>
             </div>
 
             <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 52%">
+              <div class="progress-bar" role="progressbar" style="width: 85%">
                 <div class="progress-text">
-                  <span>JS</span>
-                  <span>52%</span>
+                  <span>JavaScript</span>
+                  <span>85%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 70%">
+                <div class="progress-text">
+                  <span>Node.js</span>
+                  <span>70%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 65%">
+                <div class="progress-text">
+                  <span>Python</span>
+                  <span>65%</span>
                 </div>
               </div>
             </div>
@@ -246,87 +267,29 @@
                 </div>
               </div>
             </div>
-
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 40%">
-                <div class="progress-text">
-                  <span>Express</span>
-                  <span>40%</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 30%">
-                <div class="progress-text">
-                  <span>AWS</span>
-                  <span>30%</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="soft-skills">
-            <div class="soft-skill">
-              <div class="soft-skill-rating" style="--rating: 4.0"></div>
-              <h4 class="soft-skill-label">Proatividade</h4>
-            </div>
-
-            <div class="soft-skill">
-              <div class="soft-skill-rating" style="--rating: 3.5"></div>
-              <h4 class="soft-skill-label">Concentração</h4>
-            </div>
-
-            <div class="soft-skill">
-              <div class="soft-skill-rating" style="--rating: 4.5"></div>
-              <h4 class="soft-skill-label">Organização</h4>
-            </div>
-
-            <div class="soft-skill">
-              <div class="soft-skill-rating" style="--rating: 2.6"></div>
-              <h4 class="soft-skill-label">Comunicação</h4>
-            </div>
-
-          </div>
-        </article>
-
-        <article>
-          <div class="article-title-wrapper">
-            <i class="fas fa-folder-open"></i>
-            <h2 class="article-title">Portfólio</h2>
-          </div>
-          <p>Alguns projetos pessoais e serviços que executei:</p>
-          <div class="portfolio">
-            <a href="https://github.com/alanrochagomes/app-todolist" class="portfolio-item">
-              <figure>
-                <img src="https://portfolio-alanrocha.vercel.app/assets/TodoList-sj3yhfbz.png" />
-                <figcaption>TodoList App</figcaption>
-              </figure>
-            </a>
-
-            <a href="https://github.com/alanrochagomes/projeto-seal-world" class="portfolio-item">
-              <figure>
-                <img src="https://portfolio-alanrocha.vercel.app/assets/Seal%20World%20img-Cz97oQFa.png" />
-                <figcaption>Seal World</figcaption>
-              </figure>
-            </a>
-
-            <a href="https://github.com/alanrochagomes/App-Flix" class="portfolio-item">
-              <figure>
-                <img src="https://portfolio-alanrocha.vercel.app/assets/AppFlixImg-C34qXsMm.png" />
-                <figcaption>AppFlix</figcaption>
-              </figure>
-            </a>
-
-            <a href="#" class="portfolio-item">
-              <figure>
-                <img src="./src/assets/img/Coffee Shop.png" />
-                <figcaption>Coffee Shop</figcaption>
-              </figure>
-            </a>
           </div>
         </article>
       </section>
     </main>
+
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+
+      themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const icon = themeToggle.querySelector('i');
+        if (body.classList.contains('dark-mode')) {
+          icon.classList.remove('fa-moon');
+          icon.classList.add('fa-sun');
+        } else {
+          icon.classList.remove('fa-sun');
+          icon.classList.add('fa-moon');
+        }
+      });
+    </script>
+
+    <footer class="footer">Alan Rocha 2024 © All rights reserved.</footer>
+
   </body>
 </html>

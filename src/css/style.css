@@ -24,7 +24,6 @@ main {
 
 aside {
   background: #e9ebec;
-  padding: 50px 0 16px;
   width: 280px;
 }
 
@@ -339,4 +338,40 @@ article:not(:last-of-type) {
   .portfolio-item figure {
     text-align: center;
   }
+}
+
+.footer {
+  margin-top: 20px;
+  margin: 20px;
+  color: #060606;
+  text-align: center;
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+  background-color: rgb(25, 27, 28);
+  color: rgb(199, 194, 186);
+}
+
+body.dark-mode main {
+  background-color: rgb(24, 26, 27);
+}
+
+body.dark-mode aside {
+  background-color: rgb(24, 26, 27);
+}
+
+body.dark-mode section {
+  background-image: initial;
+  background-color: rgb(24, 26, 27);
+}
+
+body.dark-mode footer {
+  color: rgb(199, 194, 186);
+}
+
+#theme-toggle {
+  border: none;
+  background-color: transparent;
+  color: #284B63;
 }
